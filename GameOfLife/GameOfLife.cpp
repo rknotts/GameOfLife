@@ -12,7 +12,7 @@ using namespace std;
 
 void showHelp()
 {
-	cout << "GameOfLife.exe [-h][-f inputFile][-g <iterations>]" << endl;
+	cout << "GameOfLife.exe [-h][-f inputFile][-g <iterations>][-q]" << endl;
 	cout << "   -h             : show this help text" << endl;
 	cout << "   -f <inputFile> : input filename for grid initialization" << endl;
 	cout << "   -g <iterations>: specify number of iterations to model, 'c' for continuous" << endl;
