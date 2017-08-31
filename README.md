@@ -4,7 +4,7 @@ Simple engine for Conway's Game of Life.
 Intended to be run from the command line.
 
 ```
-GameOfLife.exe [-h][-f inputFile][-g <iterations>]
+GameOfLife.exe [-h][-f inputFile][-g <iterations>][-q]
    -h             : show this help text
    -f <inputFile> : input filename for grid initialization
    -g <iterations>: specify number of iterations to model, 'c' for continuous
