@@ -2,6 +2,8 @@
 #include <stdint.h>
 #include <map>
 
+using namespace std;
+
 const short UNKNOWN_NEIGHBOR_COUNT = -1;
 
 struct CellState
@@ -33,7 +35,7 @@ public:
 	void printGridState();
 
 private:
-	std::map<int64_t, std::map<int64_t, CellState> > matrix;
+	map<int64_t, map<int64_t, CellState> > matrix;
 	void addNeighborsForCell(int64_t col, int64_t row);
 	bool cellExists(int64_t column, int64_t row);
 };

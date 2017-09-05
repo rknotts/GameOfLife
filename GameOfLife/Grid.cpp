@@ -22,7 +22,7 @@ void Grid::insertCell(Cell c)
 bool Grid::cellExists(int64_t column, int64_t row)
 {
 	// find the column, then the row in the map of maps
-	map<int64_t, map<int64_t, CellState>>::iterator colIterator = matrix.find(column);
+	auto colIterator = matrix.find(column);
 	if (colIterator != matrix.end())
 	{
 		if (colIterator->second.find(row) != colIterator->second.end())
@@ -36,11 +36,11 @@ bool Grid::cellExists(int64_t column, int64_t row)
 bool Grid::isCellLive(int64_t column, int64_t row)
 {
 	// find the column, then the row in the map of maps
-	map<int64_t, map<int64_t, CellState>>::iterator colIterator = matrix.find(column);
+	auto colIterator = matrix.find(column);
 	if (colIterator != matrix.end())
 	{
 		map<int64_t, CellState> &rowMap = colIterator->second;
-		map<int64_t, CellState>::iterator rowIterator = rowMap.find(row);
+		auto rowIterator = rowMap.find(row);
 
 		if (rowIterator != rowMap.end())
 		{
@@ -54,11 +54,11 @@ bool Grid::isCellLive(int64_t column, int64_t row)
 // turns out this isn't used for now...
 void Grid::removeCell(int64_t column, int64_t row)
 {
-	map<int64_t, map<int64_t, CellState>>::iterator colIterator = matrix.find(column);
+	auto colIterator = matrix.find(column);
 	if (colIterator != matrix.end())
 	{
 		map<int64_t, CellState> &rowMap = colIterator->second;
-		map<int64_t, CellState>::iterator rowIterator = rowMap.find(row);
+		auto rowIterator = rowMap.find(row);
 
 		if (rowIterator != rowMap.end())
 		{
